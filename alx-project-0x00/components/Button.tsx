@@ -1,14 +1,10 @@
 import React from "react";
+import { ButtonProps } from "@/interfaces";
 
-interface ButtonProps {
-  title: string;
-  className?: string;
-}
-
-const Button: React.FC<ButtonProps> = ({ title, className }) => {
+const Button: React.FC<ButtonProps> = ({ title, styles }) => {
   return (
     <button
-      className={`px-4 py-2 font-medium bg-blue-500 text-white hover:bg-blue-600 transition ${className}`}
+      className={`px-4 py-2 font-medium bg-blue-500 text-white hover:bg-blue-600 transition ${styles}`}
     >
       {title}
     </button>
